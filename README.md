@@ -22,13 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-## membersテーブル
+ membersテーブル
 
-|Column|Type|Options|
+|Column|Ttpe|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### Association
+Association
 - belongs_to :group
 - belongs_to :user
