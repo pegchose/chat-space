@@ -4,11 +4,9 @@ class CreateMessages < ActiveRecord::Migration[5.0]
       t.text        :body, null:false
       t.string      :image
       t.integer     :message_id
-      t.integer     :group_id
-      t.integer     :user_id
+      t.integer     :group_id, null:false, foreign_key:true
+      t.integer     :user_id, null:false, foreign_key:true
       t.timestamps
     end
-    belongs_to :users
-    belongs_to :groups
   end
 end
