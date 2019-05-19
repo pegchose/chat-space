@@ -8,5 +8,7 @@ class CreateMessages < ActiveRecord::Migration[5.0]
       t.integer     :user_id
       t.timestamps
     end
+    belongs_to :users
+    belongs_to :groups
   end
 end

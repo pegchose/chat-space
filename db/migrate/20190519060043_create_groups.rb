@@ -6,5 +6,7 @@ class CreateGroups < ActiveRecord::Migration[5.0]
       t.integer      :user_id
       t.timestamps
     end
+    has_many :users
+    has_many :messages
   end
 end

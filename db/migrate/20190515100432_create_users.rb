@@ -9,6 +9,9 @@ class CreateUsers < ActiveRecord::Migration[5.0]
     end
 
     add_index :users, :name, :string
+
+    has_many :messages, through: :groups
+    has_many :groups
     
   end
 end
