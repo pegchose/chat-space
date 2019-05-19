@@ -31,7 +31,6 @@ Things you may want to cover:
 |body|text|null: false|
 |image|string|
 
-
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -42,7 +41,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false, unique: true|
-|group_id|integer|foreign_key: true|
 
 ## Association
 - has_many :messages
@@ -54,7 +52,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|
 
 ### Asociation
 - has_many :users, through: users_groups
@@ -65,7 +62,7 @@ Things you may want to cover:
 ## Users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
 |groups_id|integer|foreign_key: true|
 
 ### Association
