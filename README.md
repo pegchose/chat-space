@@ -46,7 +46,7 @@ Things you may want to cover:
 
 ## Association
 - has_many :messages
-- has_many :groups, through: users_messages
+- has_many :groups, through: users_groups
 
 
 
@@ -57,7 +57,7 @@ Things you may want to cover:
 |user_id|integer|
 
 ### Asociation
-- has_many :users, through: users_messages
+- has_many :users, through: users_groups
 - has_many :messages
 
 
@@ -66,7 +66,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |users_id|integer|foreign_key: true|
-|messages_id|integer|foreign_key: true|
+|groups_id|integer|foreign_key: true|
 
 ### Association
 - has_many :users
