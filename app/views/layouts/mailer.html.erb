@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%# <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,4 +10,13 @@
   <body>
     <%= yield %>
   </body>
-</html>
+</html> %>
+
+!!!
+ %html
+   %head
+     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+     :css
+       /* Email styles need to be inline */
+     %body
+       = yield      
