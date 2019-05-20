@@ -5,9 +5,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
-|body|text|null: false|
+|user_id|references|foreign_key: true|
+|group_id|references|foreign_key: true|
+|body|text|
 |image|string|
 
 ### Association
@@ -23,7 +23,8 @@
 
 ## Association
 - has_many :messages
-- has_many :groups, through: users_groups
+- has_many :groups, through: :users_groups
+- has_many :users_groups
 
 
 
@@ -33,16 +34,17 @@
 |name|string|null: false|
 
 ### Asociation
-- has_many :users, through: users_groups
+- has_many :users, through: :users_groups
 - has_many :messages
+- has_many :users_groups
 
 
 
 ## Users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|groups_id|integer|foreign_key: true|
+|user_id|references|foreign_key: true|
+|groups_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
