@@ -1,3 +1,8 @@
+@import "./_variables";
 @import "./reset";
-// @import "./index";
+@import "./mixin.scss";
+@import "./vender_prefix.scss";
 @import "font-awesome";
+@import "./side_bar";
+@import "./chat";
+@import "./messages";
